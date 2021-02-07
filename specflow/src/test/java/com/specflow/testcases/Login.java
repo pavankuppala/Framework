@@ -22,6 +22,7 @@ public class Login  extends BaseClass
 		switchActiveWindow(driver);
 		lp.loginGmail(edp.getStringData("Login",1, 0),edp.getStringData("Login",1,1));
 		Thread.sleep(3000);
+		System.out.println("==========================");
 		log.pass("login successful");
 	}
 	

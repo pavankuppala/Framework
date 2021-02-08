@@ -4,7 +4,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import com.specflow.pages.LoginPage;
-import com.specflow.utility.ExcelDataProvider;
 
 public class Login  extends BaseClass
 {

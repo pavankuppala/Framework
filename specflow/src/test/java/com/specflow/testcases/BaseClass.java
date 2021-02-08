@@ -15,6 +15,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -47,10 +48,13 @@ public class BaseClass
 	}
 	
 	
+	@Parameters("browser")
 	@BeforeClass
-	public void setUp()throws Exception
+	public void setUp(String browser)throws Exception
 	{
-		driver=SelectBrowser.initiateBrowser(driver,cdp.getBrowser(),cdp.getURL());
+		//driver=SelectBrowser.initiateBrowser(driver,cdp.getBrowser(),cdp.getURL());
+		driver=SelectBrowser.initiateBrowser(driver,browser,cdp.getURL());
+		
 	}
 	
 	@AfterMethod
